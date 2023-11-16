@@ -36,7 +36,7 @@ const ComboBox = ({ data, disabled, multipleChoice }) => {
                     role="combobox"
                     aria-expanded={open}
                     id={data.label}
-                    className="w-full justify-between w-[642px] h-[3rem]"
+                    className="w-full justify-between h-[3rem]"
                 >
                     {
                         responseChoice.length > 0
@@ -57,7 +57,7 @@ const ComboBox = ({ data, disabled, multipleChoice }) => {
                     }
                 </Button>
             </PopoverTrigger>
-            <PopoverContent className="p-0 w-[500px] absolute right-[-11.2rem]" onChange={(e) => data.setAdresse ? data.setAdresse(e.target.value) : ""}>
+            <PopoverContent className="p-0 w-[500px]" onChange={(e) => data.setAdresse ? data.setAdresse(e.target.value) : ""}>
                 <Command>
                     <CommandInput searchIcon={true} />
                     <CommandEmpty>Aucune adresse trouvé.</CommandEmpty>

@@ -24,7 +24,7 @@ const GetAllAdresse = ({ codePostal, city, required }) => {
     }
 
     useEffect(() => {
-        if (adresse.split(" ").length > 2 && city !== "") {
+        if (adresse.split(" ").length > 2 && city !== "" && adresse.split(" ")[2] != "") {
             getAdress();
         }
     }, [adresse, codePostal])
@@ -32,12 +32,6 @@ const GetAllAdresse = ({ codePostal, city, required }) => {
     useEffect(() => {
         setAllResponseAdress([]);
     }, [codePostal])
-
-    useEffect(() => {
-        adresse === "" && (
-            setAllResponseAdress([])
-        )
-    }, [adresse])
 
     useEffect(() => {
         if (adresse.split(" ").length > 0 && allAdresse.features !== undefined) {
@@ -51,7 +45,11 @@ const GetAllAdresse = ({ codePostal, city, required }) => {
             // Utilisez Set pour éviter les doublons
             const uniqueNewAddresses = Array.from(new Set([...filteredAddresses]));
 
-            setAllResponseAdress(uniqueNewAddresses);
+            if (adresse === "") {
+                setAllResponseAdress([]);
+            } else {
+                setAllResponseAdress(uniqueNewAddresses);
+            }
         }
     }, [adresse]);
 
