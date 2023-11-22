@@ -4,9 +4,9 @@ import { Label } from "@/components/ui/Label";
 
 import ComboBox from '../ComboBox';
 
-const InputComboBox = ({ content, label, data, required }) => {
+const InputComboBox = ({ content, label, data, required, suplementClass, multipleChoice }) => {
     return (
-        <div className='sm:col-start-1 sm:col-span-2 col-span-full'>
+        <div className={`sm:col-start-1 col-span-full ${suplementClass}`}>
             <Label htmlFor={label}>
                 {content} {required ? "*" : null}
             </Label>
@@ -16,7 +16,7 @@ const InputComboBox = ({ content, label, data, required }) => {
                     placeholder: data.placeholder,
                     label: data.job
                 }
-            } multipleChoice />
+            } multipleChoice={multipleChoice} />
         </div>
     );
 };

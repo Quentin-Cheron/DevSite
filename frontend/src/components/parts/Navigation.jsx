@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <nav className='shadow-3xl'>
+        <nav className='shadow-3xl fixed w-full top-0 bg-white z-50'>
             <div className="px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start h-full">
@@ -13,7 +13,7 @@ const Navigation = () => {
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex gap-5 items-center h-full">
-                                <NavLink to="/je-suis-practicient" className={({ isActive }) => (isActive ? "border-b-solid border-b-[#6366f1] border-b" : "") + " text-slate-600 text-sm font-medium h-full flex items-center transition-all"}>Je suis un practicient</NavLink>
+                                <NavLink to="/je-suis-practicient" className={({ isActive }) => (isActive ? "border-b-solid border-b-[#6366f1] border-b" : "") + " text-slate-600 text-sm font-medium h-full flex items-center transition-all"}>Je suis practicient</NavLink>
                                 <NavLink to="/je-suis-patient" className={({ isActive }) => (isActive ? "border-b-solid border-b-[#6366f1] border-b" : "") + " text-slate-600 text-sm font-medium h-full flex items-center transition-all"}  >Chercher un practicient</NavLink>
                             </div>
                         </div>

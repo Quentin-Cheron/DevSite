@@ -75,7 +75,7 @@ const SignUp = () => {
                                     allResponse: ["Hypnothérapie", "Emdr", "Nmo"],
                                     placeholder: "Entrer votre profession...",
                                     label: "job"
-                                }} />
+                                }} multipleChoice suplementClass="sm:col-span-2" />
                                 <Picture />
                                 <TextAreaPart content="Description" desc="Écrivez plusieurs phrases sur vous." label="description" className="sm:col-span-2 sm:col-start-1" required />
                             </div>

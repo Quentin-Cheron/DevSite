@@ -11,6 +11,7 @@ const InputText = ({ content, label, type, required, className, onChange, onClic
             </Label>
             <div className="mt-2">
                 <Input
+                    autoComplete="true"
                     type={type}
                     name={label}
                     id={label}

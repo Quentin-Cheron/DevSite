@@ -36,7 +36,7 @@ const ComboBox = ({ data, disabled, multipleChoice }) => {
                     role="combobox"
                     aria-expanded={open}
                     id={data.label}
-                    className="w-full justify-between h-[3rem]"
+                    className="w-full justify-between h-[3rem] mt-2"
                 >
                     {
                         responseChoice.length > 0
